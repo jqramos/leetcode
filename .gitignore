@@ -1,2 +1,3 @@
 # gitignore vscode setting
 ./vscode/setting.json
+/bin
