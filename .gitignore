@@ -1,3 +1,17 @@
 # gitignore vscode setting
 ./vscode/setting.json
 /bin
+/.idea/.gitignore
+/out/production/leetcode/App.class
+/out/production/leetcode/arrays/ContainsDuplicate.class
+/out/production/leetcode/arrays/GroupAnagram.class
+/leetcode.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/out/production/leetcode/arrays/ProductOfArrayExceptSelf.class
+/.idea/runConfigurations.xml
+/out/production/leetcode/arrays/TopKFreqElement.class
+/out/production/leetcode/arrays/TwoSum.class
+/out/production/leetcode/arrays/ValidAnagram.class
+/.idea/vcs.xml
+/out/production/leetcode/arrays/ValidSudoku.class
