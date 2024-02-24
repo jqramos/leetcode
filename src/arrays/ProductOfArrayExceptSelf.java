@@ -19,27 +19,27 @@ You must write an algorithm that runs in O(n) time and without using the divisio
      }
 
      public static int[] productExceptSelf(int[] nums) {
-        //create an array to store the result
-        int[] result = new int[nums.length];
-        //create a variable to store the product of all the elements to the left of the current element
-        int left = 1;
-        //loop through the array
-        for(int i = 0; i < nums.length; i++){
-            //store the product of all the elements to the left of the current element
-            result[i] = left;
-            //update the product of all the elements to the left of the current element
-            left *= nums[i];
-        }
-        //create a variable to store the product of all the elements to the right of the current element
-        int right = 1;
-        //loop through the array in reverse order
-        for(int i = nums.length - 1; i >= 0; i--){
-            //store the product of all the elements to the right of the current element
-            result[i] *= right;
-            //update the product of all the elements to the right of the current element
-            right *= nums[i];
-        }
-        //return the result
-        return result;
+         int arrayLength = nums.length;
+         int[] outputArray = new int[arrayLength];
+
+         // Initialize the first element of the output array.
+         outputArray[0] = 1;
+
+         // Calculate the product of all the elements to the left of each element.
+         for (int i = 1; i < arrayLength; i++) {
+             outputArray[i] = nums[i - 1] * outputArray[i - 1];
+         }
+
+         // Calculate the product of all the elements to the right of each element.
+         int rightProduct = 1;
+         for (int i = arrayLength - 1; i >= 0; i--) {
+             // Update the output array by multiplying the left product and right product.
+             outputArray[i] *= rightProduct;
+             // Update the right product.
+             rightProduct *= nums[i];
+         }
+
+         return outputArray;
+
      }
 }
